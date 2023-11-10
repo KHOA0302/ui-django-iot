@@ -118,6 +118,19 @@ input {
   font-weight: 600;
 }
 
+.log-in .to-log-up a {
+  padding: 6px 20px;
+  background-color: #dbdbdb;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.log-in .to-log-up a:hover {
+  background-color: aliceblue;
+}
+
+/*            LOG UP                 */
+
 .log-up {
   display: none;
   width: 100%;
@@ -250,4 +263,15 @@ input {
   border: 1px solid #dbdbdb;
   font-size: medium;
   font-weight: 600;
+}
+
+.log-up .to-log-in a {
+  padding: 6px 20px;
+  background-color: #dbdbdb;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.log-up .to-log-in a:hover {
+  background-color: aliceblue;
 }
