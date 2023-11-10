@@ -18,27 +18,78 @@
         <div class="form-wrapper">
           <form action="">
             <div class="user-name">
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="User name" />
             </div>
             <div class="pass">
               <input type="password" placeholder="Password" />
-              <span onclick="unHidePass(this)">
+              <span onclick="unHidePassword(this)">
                 <i class="fas fa-eye target-unHide"></i>
                 <i class="fas fa-eye-slash target-hide"></i>
               </span>
             </div>
             <div class="submit">
-              <input type="submit" value="Login" />
+              <input
+                type="submit"
+                value="Log in"
+                onclick="handleSubmitLogIn(this)"
+              />
             </div>
           </form>
           <div style="text-align: center">
-            <a href="">Forgot password?</a> <a href="#">Logup</a>
+            <a onclick="switchLog(this)">Log up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------- LOG UP -------------->
+    <div class="log-up">
+      <div class="container">
+        <h1>Log-up</h1>
+        <div class="form-wrapper">
+          <form action="">
+            <div class="user-name">
+              <input type="text" placeholder="User name" />
+            </div>
+            <div class="pass">
+              <input
+                type="password"
+                placeholder="Password"
+                oninput="handlePassword(this)"
+              />
+              <span onclick="unHidePassword(this)">
+                <i class="fas fa-eye target-unHide"></i>
+                <i class="fas fa-eye-slash target-hide"></i>
+              </span>
+            </div>
+
+            <div class="pass-again">
+              <input
+                type="password"
+                placeholder="Password again"
+                oninput="handlePassword(this)"
+              />
+              <span onclick="unHidePassword(this)">
+                <i class="fas fa-eye target-unHide"></i>
+                <i class="fas fa-eye-slash target-hide"></i>
+              </span>
+            </div>
+            <div class="submit">
+              <input
+                type="submit"
+                value="Log up"
+                onclick="handleSubmitLogUp(this)"
+              />
+            </div>
+          </form>
+          <div style="text-align: center">
+            <a onclick="switchLog(this)">Log in</a>
           </div>
         </div>
       </div>
     </div>
     <script>
-      const unHidePass = (target) => {
+      const unHidePassword = (target) => {
         const targetParent = target.parentElement;
         const input = targetParent.childNodes[1];
         if (targetParent.classList.contains("hide")) {
@@ -47,6 +98,82 @@
         } else {
           targetParent.classList.add("hide");
           input.type = "text";
+        }
+      };
+
+      const handlePassword = (target) => {
+        const passwordInput = document.querySelector(
+          '.log-up .pass input[type="password"]'
+        );
+
+        const passwordAgainInput = document.querySelector(
+          '.log-up .pass-again input[type="password"]'
+        );
+
+        if (
+          target.value !== passwordInput.value ||
+          target.value !== passwordAgainInput.value
+        ) {
+          passwordAgainInput.parentElement.classList.add("active");
+        } else {
+          passwordAgainInput.parentElement.classList.remove("active");
+        }
+      };
+
+      const handleSubmitLogIn = (target) => {
+        const userNameInput = document.querySelector(
+          ".log-in .user-name input"
+        );
+        const password = document.querySelector(".log-in .pass input");
+
+        if (userNameInput.value.length > 0 && password.value.length > 0) {
+        } else {
+          event.preventDefault();
+          alert("Vui lòng nhập đầy đủ thông tin");
+        }
+      };
+
+      const handleSubmitLogUp = (target) => {
+        //log up
+        const userNameInput = document.querySelector(
+          ".log-up .user-name input"
+        );
+        const passwordInput = document.querySelector(
+          '.log-up .pass input[type="password"]'
+        );
+
+        const passwordAgainInput = document.querySelector(
+          '.log-up .pass-again input[type="password"]'
+        );
+
+        if (
+          userNameInput.value.length !== 0 &&
+          passwordInput.value.length !== 0 &&
+          passwordAgainInput.value.length !== 0 &&
+          !passwordAgainInput.parentElement.classList.contains("active")
+        ) {
+        } else {
+          event.preventDefault();
+          alert("Vui lòng nhập đầy đủ thông tin");
+        }
+      };
+
+      const switchLog = (target) => {
+        const logUp = document.querySelector(".log-up");
+        const logIn = document.querySelector(".log-in");
+        const passwordAgainInput = document.querySelector(
+          '.log-up .pass-again input[type="password"]'
+        );
+
+        if (
+          target.parentElement.parentElement.parentElement.parentElement ===
+          logUp
+        ) {
+          logIn.classList.remove("hide");
+          logUp.classList.remove("hide");
+        } else {
+          logUp.classList.add("hide");
+          logIn.classList.add("hide");
         }
       };
     </script>
