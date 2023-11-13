@@ -75,57 +75,13 @@
         }
       };
 
-      const handlePassword = (target) => {
-        const passwordInput = document.querySelector(
-          '.log-up .pass input[type="password"]'
-        );
-
-        const passwordAgainInput = document.querySelector(
-          '.log-up .pass-again input[type="password"]'
-        );
-
-        if (
-          target.value !== passwordInput.value ||
-          target.value !== passwordAgainInput.value
-        ) {
-          passwordAgainInput.parentElement.classList.add("active");
-        } else {
-          passwordAgainInput.parentElement.classList.remove("active");
-        }
-      };
-
       const handleSubmitLogIn = (target) => {
         const userNameInput = document.querySelector(
-          ".log-in .user-name input"
+          ".log-in-page .user-name input"
         );
-        const password = document.querySelector(".log-in .pass input");
+        const password = document.querySelector(".log-in-page .pass input");
 
         if (userNameInput.value.length > 0 && password.value.length > 0) {
-        } else {
-          event.preventDefault();
-          alert("Vui lòng nhập đầy đủ thông tin");
-        }
-      };
-
-      const handleSubmitLogUp = (target) => {
-        //log up
-        const userNameInput = document.querySelector(
-          ".log-up .user-name input"
-        );
-        const passwordInput = document.querySelector(
-          '.log-up .pass input[type="password"]'
-        );
-
-        const passwordAgainInput = document.querySelector(
-          '.log-up .pass-again input[type="password"]'
-        );
-
-        if (
-          userNameInput.value.length !== 0 &&
-          passwordInput.value.length !== 0 &&
-          passwordAgainInput.value.length !== 0 &&
-          !passwordAgainInput.parentElement.classList.contains("active")
-        ) {
         } else {
           event.preventDefault();
           alert("Vui lòng nhập đầy đủ thông tin");

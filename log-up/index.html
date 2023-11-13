@@ -93,11 +93,11 @@
 
       const handlePassword = (target) => {
         const passwordInput = document.querySelector(
-          '.log-up .pass input[type="password"]'
+          '.log-up-page .pass input[type="password"]'
         );
 
         const passwordAgainInput = document.querySelector(
-          '.log-up .pass-again input[type="password"]'
+          '.log-up-page .pass-again input[type="password"]'
         );
 
         if (
@@ -110,30 +110,17 @@
         }
       };
 
-      const handleSubmitLogIn = (target) => {
-        const userNameInput = document.querySelector(
-          ".log-in .user-name input"
-        );
-        const password = document.querySelector(".log-in .pass input");
-
-        if (userNameInput.value.length > 0 && password.value.length > 0) {
-        } else {
-          event.preventDefault();
-          alert("Vui lòng nhập đầy đủ thông tin");
-        }
-      };
-
       const handleSubmitLogUp = (target) => {
         //log up
         const userNameInput = document.querySelector(
-          ".log-up .user-name input"
+          ".log-up-page .user-name input"
         );
         const passwordInput = document.querySelector(
-          '.log-up .pass input[type="password"]'
+          '.log-up-page .pass input[type="password"]'
         );
 
         const passwordAgainInput = document.querySelector(
-          '.log-up .pass-again input[type="password"]'
+          '.log-up-page .pass-again input[type="password"]'
         );
 
         if (
