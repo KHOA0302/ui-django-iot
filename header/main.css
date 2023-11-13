@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li,
+ul,
+body {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: aquamarine;
+}
+
+header a {
+  color: white;
+}
+
+header .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .home-btn {
+  height: 60%;
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+
+header .container .home-btn:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .container .user-section {
+  display: flex;
+  height: 100%;
+}
+
+header .user-out,
+.user-in {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+header .user-out .log-in,
+.log-up {
+  padding: 0 8px;
+  height: 60%;
+  border-radius: 16px;
+  color: white;
+  background-color: tomato;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header .user-out .log-in:hover,
+.log-up:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .user-section .user-in {
+  display: inherit;
+}
+
+header .user-in .log-out {
+  padding: 0 8px;
+  height: 60%;
+  border-radius: 16px;
+  color: white;
+  background-color: tomato;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header .user-in .log-out:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .user-in .user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #dbdbdb;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li,
+ul,
+body {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: aquamarine;
+}
+
+header a {
+  color: white;
+}
+
+header .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .home-btn {
+  height: 60%;
+  padding: 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+
+header .container .home-btn:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .container .user-section {
+  display: flex;
+  height: 100%;
+}
+
+header .user-out,
+.user-in {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+header .user-out .log-in,
+.log-up {
+  padding: 0 8px;
+  height: 60%;
+  border-radius: 16px;
+  color: white;
+  background-color: tomato;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header .user-out .log-in:hover,
+.log-up:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .user-section .user-in {
+  display: inherit;
+}
+
+header .user-in .log-out {
+  padding: 0 8px;
+  height: 60%;
+  border-radius: 16px;
+  color: white;
+  background-color: tomato;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header .user-in .log-out:hover {
+  background-color: rgb(246, 122, 100);
+}
+
+header .user-in .user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #dbdbdb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* LOG-IN */
+
+.log-in-page {
+  display: block;
+  width: 100%;
+}
+
+.log-in-page.hide {
+  display: none;
+}
+
+.log-in-page h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.log-in-page .container {
+  width: 60%;
+  margin: auto;
+}
+
+.log-in-page .form-wrapper {
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.log-in-page form {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.log-in-page input {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.log-in-page input:hover {
+  border: 1px solid #dbdbdb;
+}
+
+.log-in-page input:focus {
+  border: 1px solid #ccc;
+}
+
+.log-in-page .user-name {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.log-in-page .user-name input {
+  width: 100%;
+}
+
+.log-in-page .pass {
+  position: relative;
+  display: flex;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.log-in-page .pass input {
+  width: 100%;
+}
+
+.log-in-page .pass span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  line-height: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.log-in-page .target-hide {
+  display: none;
+}
+
+.log-in-page .hide .target-hide {
+  display: block;
+}
+
+.log-in-page .target-unHide {
+  display: block;
+}
+
+.log-in-page .hide .target-unHide {
+  display: none;
+}
+
+.log-in-page .submit {
+  width: 100%;
+}
+
+.log-in-page .submit input {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.log-in-page .to-log-up a {
+  padding: 6px 20px;
+  background-color: #dbdbdb;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.log-in-page .to-log-up a:hover {
+  background-color: aliceblue;
+}
