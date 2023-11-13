@@ -5,22 +5,6 @@
   box-sizing: border-box;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-input {
-  outline: none;
-  border: none;
-}
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-}
-
 li,
 ul,
 body {
@@ -64,10 +48,15 @@ header .container {
 header .container .home-btn {
   height: 60%;
   padding: 0 12px;
+  background-color: tomato;
+  border-radius: 16px;
+}
+
+header .container .home-btn button {
+  height: 100%;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 16px;
-  background-color: tomato;
+  background-color: transparent;
   color: white;
   cursor: pointer;
 }
@@ -94,10 +83,17 @@ header .user-out .log-in,
   padding: 0 8px;
   height: 60%;
   border-radius: 16px;
-  color: white;
   background-color: tomato;
-  font-weight: 600;
   cursor: pointer;
+}
+
+header .user-out .log-in button,
+.log-up button {
+  height: 100%;
+  border-radius: 16px;
+  color: white;
+  background-color: transparent;
+  font-weight: 600;
 }
 
 header .user-out .log-in:hover,
@@ -131,6 +127,7 @@ header .user-in .user-icon {
   font-weight: 600;
   cursor: pointer;
 }
+
 
 /* LOG-IN */
 
